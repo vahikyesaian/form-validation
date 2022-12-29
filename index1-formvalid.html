@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="fontello-373c5bd1/css/fontello.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .fp{
+            width: 100%;
+            height: 120vh;
+            background-image: url(img/technology-abstract-background-with-connected-line-and-dots-big-data-visualization-artificial-intelligence-and-machine-learning-concept-background-T16WRG.jpg);
+            background-size: cover;
+            display: flex;
+            /* justify-content: center;
+            align-items: center; */
+        }
+        .form{
+            width: 30%;
+            height: 90%;
+            /* border: 1px solid black; */
+            margin: 50px auto;
+            border-radius: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            position: relative;
+            background-color: rgba(245, 245, 245, 0.822);
+            box-shadow: -5px 5px 60px black;
+        }
+        .form>div{
+            width: 100%;
+            height: 80px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.667);
+            background-color: rgba(220, 220, 220, 0.584);
+            position: absolute;
+            top: 0;left: 0;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        .form>div>h1{
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            font-size: 30px;
+            text-transform: capitalize;
+            padding: 25px;
+            
+        }
+        .form>section{
+            width: 100%;
+            height: 87%; 
+            /* background-color: aqua; */
+            position: absolute;
+            bottom: 0;
+            padding: 20px;
+        }
+        .form>section>h3{
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            text-transform: capitalize;
+            font-size: 17px;
+            padding: 0 23px;
+            
+            
+        }
+        .form>section>input{
+            width: 90%;
+            height: 45px;
+            border-radius: 5px;
+            border: none;
+            outline:  1px solid gainsboro;
+            margin: 10px 23px ;
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            font-size: 17px;
+            padding-left: 10px;
+            text-transform: capitalize;
+        }
+        #check{
+            width: 12px;
+            height: 12px;
+            margin-left: 23px;
+            margin-right: 0;
+            transition: .4s;
+
+        }
+        .form>section>label{
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            text-transform: capitalize;
+            font-size: 11px;
+            color: rgba(0, 0, 0, 0.704);
+            text-align: justify;
+            cursor: pointer;
+            
+        }
+        .form>section>button{
+            width: 90%;
+            height: 50px;
+            margin: 15px 23px ;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            font-size: 20px;
+            text-transform: capitalize;
+            border-radius: 5px;
+            border: none;
+            background-color:  #3FC679;
+            color: white;
+            cursor: pointer;
+            transition: .4s;
+            
+        }
+        .form>section>button:hover{
+            background-color:  #3fc679bf;
+            transform: scale(1.01);
+
+        }
+        .form>section>span{
+            display: block;
+            width: 90%;
+            min-height: 20px;
+            /* background-color: aquamarine; */
+            margin-left: 23px;
+            margin-bottom: 15px;
+            color: red;
+            font-size: 15px;
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            
+        }
+        .form>section>i{
+            color: red;
+            position: absolute;
+            font-size: 18px;
+            display: none;
+        }
+        .form>section>i:nth-of-type(1){
+            top: 8.5%;right: 10%;
+        }
+        .form>section>i:nth-of-type(2){
+            top: 25.5%;right: 10%;
+        }
+        .form>section>i:nth-of-type(3){
+            top: 42.5%;right: 10%;
+        }
+        .form>section>i:nth-of-type(4){
+            top: 59.5%;right: 10%;
+        }
+        .form>section>i:nth-of-type(5){
+            bottom:25.5%;left: 3%;
+        }
+        .form>section>div>i{
+            color: #3FC679;
+            position: absolute;
+            font-size: 18px;
+            display: none;
+        }
+        .form>section>div>i:nth-of-type(1){
+            top: 8.5%;right: 10%;
+        }
+        .form>section>div>i:nth-of-type(2){
+            top: 25.5%;right: 10%;
+        }
+        .form>section>div>i:nth-of-type(3){
+            top: 42.5%;right: 10%;
+        }
+        .form>section>div>i:nth-of-type(4){
+            top: 59.5%;right: 10%;
+        }
+        .form>section>div>i:nth-of-type(5){
+            bottom:25.5%;left: 3%;
+        }
+    
+
+     
+    </style>
+</head>
+<body>
+    <div class="fp">
+     <form action="signup.php" class="form" name="signup" >
+        <div><h1>create account</h1></div>
+        <section>
+            <h3>username</h3>
+            <input type="text" name="username" placeholder="example17" autofocus required>
+            <i class="icon-demo icon-attention"></i>
+            <span id="userErr"></span>
+            <h3>email</h3>
+            <input type="text" name="email" placeholder="example@mail.com"  required>
+            <i class="icon-demo icon-attention"></i>
+            <span id="emailErr"></span>
+            <h3>password</h3>
+            <input type="password" name="pass" placeholder="password" required>
+            <i class="icon-demo icon-attention"></i>
+            <span id="passErr"></span>
+            <h3>confirm password</h3>
+            <input type="password" name="passcheck" placeholder="password check" required>
+            <i class="icon-demo icon-attention"></i>
+            <span id="passcheckErr"></span>
+            <input type="checkbox" id="check" name="privacy" required >
+            <i class="icon-demo icon-attention"></i>
+            <label for="check">by clicking sign up, you are agreeing to trerms of use and privacy policy</label>
+            <span id="ppErr"></span>
+            <button id="btn">sign up</button>
+            <div>
+                <i class="icon-demo  icon-ok-circle"></i>
+                <i class="icon-demo  icon-ok-circle"></i>
+                <i class="icon-demo  icon-ok-circle"></i>
+                <i class="icon-demo  icon-ok-circle"></i>
+                <i class="icon-demo  icon-ok-circle"></i>
+            </div>
+        </section>
+     </form>
+    </div>
+</body>
+<script>
+    let _span=document.querySelectorAll('.form>section>span')
+    let _inp= document.querySelectorAll('.form>section>input')
+    let _icon = document.querySelectorAll('.form>section>i') 
+    let _iconcheck=document.querySelectorAll('.form>section>div>i')
+    document.getElementById('btn').addEventListener('click',(e)=>{
+        let flag=0
+        let _user= document.forms['signup']['username'].value
+        let _email= document.forms['signup']['email'].value
+        let _pass= document.forms['signup']['pass'].value
+        let _passcheck= document.forms['signup']['passcheck'].value
+        let _pp= document.forms['signup']['privacy'].value
+        _span.forEach(function(val){
+            val.innerHTML=''
+        })
+
+        if(_user=='' || _user== null || (_user.search(/script/))>=0){
+            document.getElementById('userErr').innerHTML='Please enter a username'
+            _inp[0].style.border='1px solid red'
+            _icon[0].style.display='block'
+            flag++
+        }else{
+            if(
+                _user.length<3
+            ){
+             document.getElementById('userErr').innerHTML='username must have at least 3 characters'
+            _icon[0].style.display='block'    
+            flag++
+            }else{
+                _iconcheck[0].style.display='block'
+                _icon[0].style.display='none'
+                _inp[0].style.border='1px solid #3fc679bf'
+            }
+        }
+        // end username
+        if(_email=='' || _email== null || (_email.search(/script/))>=0){
+            document.getElementById('emailErr').innerHTML='Please enter an email'
+            _inp[1].style.border='1px solid red'
+            _icon[1].style.display='block'
+            flag++
+        }else{
+            let self= _email.match(/@/g)
+            let temp =_email.search(/@/)
+            let _dot =_email.indexOf('.',temp)
+            if(
+                (temp<3 )||
+                ((_email.search(/[ا-ی]/))>=0) ||
+                ((_email.search(/[!#$%^&*()+=,/?~]/))>=0) ||
+                _email.length<10 ||
+                self.length>1||
+                (temp+3)>=_dot
+
+
+            ){
+                document.getElementById('emailErr').innerHTML='Your Email id is invalid '
+                _icon[1].style.display='block'
+                flag++
+            }else{
+                _iconcheck[1].style.display='block'
+                _icon[1].style.display='none'
+                _inp[1].style.border='1px solid #3fc679bf'
+            }
+        }
+        // end email
+        if(_pass=='' || _pass== null || (_pass.search(/script/))>=0){
+            document.getElementById('passErr').innerHTML='Please enter a password'
+            _inp[2].style.border='1px solid red'
+            _icon[2].style.display='block'
+            flag++
+        }else{
+            if(
+                (_pass.search(/[ا-ی]/))>=0||
+                (_pass.search('[~!@#$%^&*()_+}{|""}]')) == -1 ||
+                _pass.length<8 ||
+                (_pass.search(/[A-Z]/))==-1
+            ){
+            document.getElementById('passErr').innerHTML='Your password is invalid,password should contain special characters(!@#$%^&*,/\) and at least one uppercase'
+            _icon[2].style.display='block'
+            document.querySelector('.form>section>i:nth-of-type(4)').style.top='64.2%'
+            document.querySelector('.form>section>i:nth-of-type(5)').style.bottom='21%'
+            flag++
+            }else{
+                _iconcheck[2].style.display='block'
+                _icon[2].style.display='none'
+                _inp[2].style.border='1px solid #3fc679bf'
+            }
+        }
+        // end password
+        if(_passcheck=='' || _passcheck== null || (_passcheck.search(/script/))>=0){
+            document.getElementById('passcheckErr').innerHTML='Please enter a password confirmation'
+            _inp[3].style.border='1px solid red'
+            _icon[3].style.display='block'
+            flag++
+        }else{
+            if(
+                _passcheck!=_pass
+            ){
+             document.getElementById('passcheckErr').innerHTML='Password does not match'
+            _inp[3].style.border='1px solid red'
+            _icon[3].style.display='block'
+            flag++
+            }else{
+                _iconcheck[3].style.display='block'
+                _icon[3].style.display='none'
+                _inp[3].style.border='1px solid #3fc679bf'
+            }
+        }
+        // end pass check
+        if(_pp='unchecked' ){
+            document.getElementById('ppErr').innerHTML='Please agree to our terms of use and privacy policy'
+            _icon[4].style.display='block'
+            flag++
+        }
+        if(flag>0){
+            e.preventDefault()
+        }        
+    })
+
+
+</script>
+</html>
